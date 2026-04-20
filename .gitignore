@@ -45,6 +45,8 @@ dist/
 
 *.h5
 
+*.keras
+
 
 # Streamlit cache
 
