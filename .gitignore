@@ -1,0 +1,51 @@
+# Virtual Environment
+
+venv/
+env/
+ENV/
+
+# Python cache
+
+**pycache**/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+
+.ipynb_checkpoints/
+
+# VS Code settings
+
+.vscode/
+
+# System files
+
+.DS_Store
+Thumbs.db
+
+# Logs
+
+*.log
+
+# Environment variables
+
+.env
+
+# Build files
+
+build/
+dist/
+
+# Temporary files
+
+*.tmp
+
+# TensorFlow / ML cache (optional)
+
+*.h5
+*.keras
+
+# Streamlit cache
+
+.streamlit/
