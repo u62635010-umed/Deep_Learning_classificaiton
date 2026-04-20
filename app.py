@@ -14,13 +14,18 @@ st.title("🍎 Fresh vs Rotten Image Classifier")
 st.write("Upload an image and the model will predict whether it is **Fresh** or **Rotten**.")
 
 # -----------------------------
-# Load model
+# Load model (with download)
 # -----------------------------
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("fruits_classification_model.keras")
-    # If using h5 instead:
-    # return tf.keras.models.load_model("model.h5")
+    model_path = "model.keras"
+
+    # Agar model local me nahi hai to download karo
+    if not os.path.exists(model_path):
+        url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+        gdown.download(url, model_path, quiet=False)
+
+    return tf.keras.models.load_model(model_path)
 
 model = load_model()
 
@@ -51,3 +56,4 @@ if uploaded_file is not None:
 
         st.subheader(f"Prediction: {label}")
         st.write(f"Confidence Score: **{confidence:.4f}**")
+        
