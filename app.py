@@ -22,7 +22,7 @@ def load_model():
 
     # Agar model local me nahi hai to download karo
     if not os.path.exists(model_path):
-        url = "https://drive.google.com/open?id=1GIKAkWoimsjhjlf-crq9eJPkfXB1oswB&usp=drive_fs"
+        url = "https://drive.google.com/uc?id=1GIKAkWoimsjhjlf-crq9eJPkfXB1oswB"
         gdown.download(url, model_path, quiet=False)
 
     return tf.keras.models.load_model(model_path)
